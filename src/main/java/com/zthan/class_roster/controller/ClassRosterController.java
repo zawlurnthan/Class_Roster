@@ -6,7 +6,7 @@
 package com.zthan.class_roster.controller;
 
 import com.zthan.class_roster.dao.ClassRosterDao;
-import com.zthan.class_roster.dao.ClassRosterDaoFileImpl;
+import com.zthan.class_roster.dao.ClassRosterDaoException;
 import com.zthan.class_roster.dto.Student;
 import com.zthan.class_roster.ui.ClassRosterView;
 import java.util.List;
@@ -29,7 +29,8 @@ public class ClassRosterController {
         boolean keepGoing = true;
         int menuSelection = 0;
         
-        while (keepGoing) {
+        try {
+                    while (keepGoing) {
             
             menuSelection = getMenuSelection();
             
@@ -59,33 +60,36 @@ public class ClassRosterController {
             }
         }
         exitMessage();
+        } catch (ClassRosterDaoException e) {
+            view.displayErrorMessage(e.getMessage());
+        }
     }
     
     private int getMenuSelection() {
         return view.printMenuAndGetSelection();
     }
     
-    private void createStudent() {
+    private void createStudent() throws ClassRosterDaoException {
         view.displayCreatedStudentBanner();
         Student newStudent = view.getNewStudentInfo();
         dao.addStudent(newStudent.getStudentId(), newStudent);
         view.displayCreatedSuccessBanner();
     }
     
-    private void listStudents() {
+    private void listStudents() throws ClassRosterDaoException {
         view.displayAllStudentsBanner();
         List<Student> studentList = dao.getAllStudents();
         view.displayStudentList(studentList);
     }
     
-    private void viewStudent() {
+    private void viewStudent() throws ClassRosterDaoException {
         view.displayStudentBanner();
         String id = view.getStudentIdChoice();
         Student student = dao.getStudent(id);
         view.displayStudent(student);
     }
     
-    private void removeStudent() {
+    private void removeStudent() throws ClassRosterDaoException {
         view.displayRemoveStudentBanner();
         String id = view.getStudentIdChoice();
         Student student = dao.removeStudent(id);
