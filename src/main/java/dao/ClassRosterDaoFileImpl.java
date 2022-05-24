@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.zthan.class_roster.dao;
+package dao;
 
-import com.zthan.class_roster.dto.Student;
+import dto.Student;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

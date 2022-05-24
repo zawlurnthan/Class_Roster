@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.zthan.class_roster;
+package class_roster;
 
-import com.zthan.class_roster.controller.ClassRosterController;
-import com.zthan.class_roster.dao.ClassRosterDao;
-import com.zthan.class_roster.dao.ClassRosterDaoFileImpl;
-import com.zthan.class_roster.ui.ClassRosterView;
-import com.zthan.class_roster.ui.UserIO;
-import com.zthan.class_roster.ui.UserIOConsoleImpl;
+import controller.ClassRosterController;
+import dao.ClassRosterDao;
+import dao.ClassRosterDaoFileImpl;
+import ui.ClassRosterView;
+import ui.UserIO;
+import ui.UserIOConsoleImpl;
 
 /**
  *

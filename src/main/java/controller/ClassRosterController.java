@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.zthan.class_roster.controller;
+package controller;
 
-import com.zthan.class_roster.dao.ClassRosterDao;
-import com.zthan.class_roster.dao.ClassRosterDaoException;
-import com.zthan.class_roster.dto.Student;
-import com.zthan.class_roster.ui.ClassRosterView;
+import dao.ClassRosterDao;
+import dao.ClassRosterDaoException;
+import dto.Student;
+import ui.ClassRosterView;
 import java.util.List;
 
 /**
