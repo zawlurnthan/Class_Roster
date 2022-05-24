@@ -1,3 +1,2 @@
 1::John::Doe::Entry Java
 2::Mary::Cosmatic::Intro Java
-3::Mandoza::Mordova::MThree Cohort
