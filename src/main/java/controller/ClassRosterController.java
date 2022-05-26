@@ -30,7 +30,7 @@ public class ClassRosterController {
         int menuSelection = 0;
         
         try {
-                    while (keepGoing) {
+            while (keepGoing) {
             
             menuSelection = getMenuSelection();
             
